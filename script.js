@@ -11,7 +11,8 @@ function getWeather() {
     document.getElementById('error-message').style.display = 'none';
 
     const apiKey = '3e926ba35f6a4255a9791118252701';
-    const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}&aqi=yes`;
+  const url = `https://cors-anywhere.herokuapp.com/http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}&aqi=yes`;
+ 
 
     fetch(url)
         .then(response => response.json())
